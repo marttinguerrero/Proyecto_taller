@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkListStore" id="BranchList">
+    <columns>
+      <!-- column-name BranchColumn1 -->
+      <column type="BranchColumn"/>
+    </columns>
+    <data>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+    </data>
+  </object>
+  <object class="GtkListStore" id="HistoryList">
+    <columns>
+      <!-- column-name HistoryColumn1 -->
+      <column type="HistoryColumn"/>
+    </columns>
+    <data>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+    </data>
+  </object>
+  <object class="GtkListStore" id="LocalList">
+    <columns>
+      <!-- column-name LocalColumn1 -->
+      <column type="LocalColumn"/>
+    </columns>
+    <data>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+    </data>
+  </object>
+  <object class="GtkWindow" id="MainWindow">
+    <property name="name">MainWindow</property>
+    <property name="width-request">900</property>
+    <property name="height-request">600</property>
+    <property name="can-focus">False</property>
+    <property name="resizable">False</property>
+    <child>
+      <object class="GtkFixed" id="MainWIndowFixed">
+        <property name="name">MainWIndowFixed</property>
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkNotebook" id="Notebook">
+            <property name="name">Notebook</property>
+            <property name="width-request">800</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="tab-pos">left</property>
+            <property name="enable-popup">True</property>
+            <child>
+              <object class="GtkFixed" id="InitGrid">
+                <property name="name">RepositoryGrid</property>
+                <property name="height-request">300</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkEntry" id="init_entry">
+                    <property name="name">add_entry</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">200</property>
+                    <property name="y">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="InitBoton">
+                    <property name="label" translatable="yes">Init</property>
+                    <property name="width-request">13</property>
+                    <property name="height-request">10</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">400</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="InitLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Ingresar ruta al directorio: </property>
+                  </object>
+                  <packing>
+                    <property name="x">35</property>
+                    <property name="y">-22</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="InitPage">
+                <property name="name">PrPage</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Init</property>
+              </object>
+              <packing>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="ConfigGrid">
+                <property name="name">PullGrid</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="PullRequestScrolledWindow">
+                    <property name="width-request">752</property>
+                    <property name="height-request">200</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="UserEntry">
+                    <property name="width-request">100</property>
+                    <property name="height-request">35</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">300</property>
+                    <property name="y">50</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="MailEntry">
+                    <property name="width-request">100</property>
+                    <property name="height-request">35</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">300</property>
+                    <property name="y">100</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="UserLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">User:</property>
+                  </object>
+                  <packing>
+                    <property name="x">200</property>
+                    <property name="y">33</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="Mail">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Mail: </property>
+                  </object>
+                  <packing>
+                    <property name="x">200</property>
+                    <property name="y">75</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="ConfigButton">
+                    <property name="label" translatable="yes">Confirmar</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">344</property>
+                    <property name="y">150</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="ConfigPage">
+                <property name="name">PullRequestPage</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Config</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="AddGrid">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="AddScrolledWindow">
+                    <property name="name">AddScrolledWindow</property>
+                    <property name="width-request">752</property>
+                    <property name="height-request">216</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="add_entry">
+                    <property name="name">add_entry</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">523</property>
+                    <property name="y">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="archivo_agregara">
+                    <property name="width-request">100</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Nombre del archivo para agregar:</property>
+                    <attributes>
+                      <attribute name="foreground" value="#ffffffffffff"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">307</property>
+                    <property name="y">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="boton_agregar">
+                    <property name="label" translatable="yes">Add</property>
+                    <property name="name">boton_agregar</property>
+                    <property name="width-request">13</property>
+                    <property name="height-request">10</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">699</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="AddPage">
+                <property name="name">AddPage</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Add File</property>
+              </object>
+              <packing>
+                <property name="position">2</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="CommitGrid">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="CommitScrolledWindow">
+                    <property name="width-request">752</property>
+                    <property name="height-request">216</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="CommitEntry">
+                    <property name="width-request">100</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">466</property>
+                    <property name="y">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="CommitLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Ingresar mensaje: </property>
+                  </object>
+                  <packing>
+                    <property name="x">352</property>
+                    <property name="y">-18</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="CommitButton">
+                    <property name="label" translatable="yes">Commit</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">663</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="CommitPage">
+                <property name="name">LocalPage</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Commit</property>
+              </object>
+              <packing>
+                <property name="position">3</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="HistoryGrid">
+                <property name="name">HistoryGrid</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="HistoryScrolledWindow">
+                    <property name="name">HistoryScrolledWindow</property>
+                    <property name="width-request">752</property>
+                    <property name="height-request">216</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="HistoryUser">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">USER</property>
+                  </object>
+                  <packing>
+                    <property name="x">136</property>
+                    <property name="y">-11</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="HistoryCommit">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">COMMIT</property>
+                  </object>
+                  <packing>
+                    <property name="x">480</property>
+                    <property name="y">-11</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="HistoryPage">
+                <property name="name">HistoryPage</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">History</property>
+              </object>
+              <packing>
+                <property name="position">4</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="BranchesGrid">
+                <property name="name">BranchesGrid</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="BranchesScrolledWindow">
+                    <property name="name">BranchesScrolledWindow</property>
+                    <property name="width-request">752</property>
+                    <property name="height-request">184</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="vexpand">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">20</property>
+                    <property name="y">156</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="BranchesLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Branches</property>
+                  </object>
+                  <packing>
+                    <property name="x">325</property>
+                    <property name="y">-25</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="AddBranchLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Add Branch:</property>
+                  </object>
+                  <packing>
+                    <property name="x">20</property>
+                    <property name="y">20</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="AddBranchEntry">
+                    <property name="width-request">8</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">108</property>
+                    <property name="y">46</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="AddBranchButton">
+                    <property name="label" translatable="yes">Add</property>
+                    <property name="width-request">40</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">288</property>
+                    <property name="y">43</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="CheckoutLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Change branch to: </property>
+                  </object>
+                  <packing>
+                    <property name="x">30</property>
+                    <property name="y">64</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="ChangeBranchEntry">
+                    <property name="width-request">8</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">144</property>
+                    <property name="y">91</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="ChangeBranchButton">
+                    <property name="label" translatable="yes">Change</property>
+                    <property name="width-request">40</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">325</property>
+                    <property name="y">91</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">5</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="BranchesPage">
+                <property name="name">BranchesPage</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Branches</property>
+              </object>
+              <packing>
+                <property name="position">5</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="PushGrid">
+                <property name="name">RemoteGrid</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="PushScrolledWindow">
+                    <property name="width-request">752</property>
+                    <property name="height-request">216</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="PushBoton">
+                    <property name="label" translatable="yes">Push</property>
+                    <property name="width-request">40</property>
+                    <property name="height-request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">593</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">6</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="PushPage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Push</property>
+              </object>
+              <packing>
+                <property name="position">6</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="FetchGrid">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="FetchScrolledWindow">
+                    <property name="width-request">752</property>
+                    <property name="height-request">216</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="CloneBoton">
+                    <property name="label" translatable="yes">Clone</property>
+                    <property name="width-request">20</property>
+                    <property name="height-request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">580</property>
+                    <property name="y">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="CloneEntry">
+                    <property name="width-request">20</property>
+                    <property name="height-request">32</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">405</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="CloneLabel">
+                    <property name="width-request">30</property>
+                    <property name="height-request">32</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">URL: </property>
+                  </object>
+                  <packing>
+                    <property name="x">369</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="DirEntry">
+                    <property name="width-request">20</property>
+                    <property name="height-request">32</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">174</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="PathLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Path: </property>
+                  </object>
+                  <packing>
+                    <property name="x">92</property>
+                    <property name="y">-20</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">7</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="ClonePage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Clone</property>
+              </object>
+              <packing>
+                <property name="position">7</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="PullGrid">
+                <property name="width-request">100</property>
+                <property name="height-request">80</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="PullScrolledWindow">
+                    <property name="width-request">752</property>
+                    <property name="height-request">216</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="PullBoton">
+                    <property name="label" translatable="yes">Pull</property>
+                    <property name="width-request">30</property>
+                    <property name="height-request">4</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">597</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="PullEntry">
+                    <property name="width-request">100</property>
+                    <property name="height-request">35</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">413</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="PullLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Rama: </property>
+                  </object>
+                  <packing>
+                    <property name="x">310</property>
+                    <property name="y">-20</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">8</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="PullPage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Pull</property>
+              </object>
+              <packing>
+                <property name="position">8</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="RemoteGrid">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="RemoteScrolledWindow">
+                    <property name="name">RemoteScrolledWindow</property>
+                    <property name="width-request">752</property>
+                    <property name="height-request">216</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="RemoteBoton">
+                    <property name="label" translatable="yes">Connect</property>
+                    <property name="width-request">69</property>
+                    <property name="height-request">35</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">690</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="RemoteEntry">
+                    <property name="width-request">70</property>
+                    <property name="height-request">35</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">510</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="RemoteLabel">
+                    <property name="width-request">60</property>
+                    <property name="height-request">35</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Nombre del repositorio:</property>
+                  </object>
+                  <packing>
+                    <property name="x">365</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="NombreRemote">
+                    <property name="width-request">100</property>
+                    <property name="height-request">35</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Nombre:</property>
+                  </object>
+                  <packing>
+                    <property name="x">70</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="RepoName">
+                    <property name="width-request">86</property>
+                    <property name="height-request">35</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">150</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">9</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="RemotePage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Remote</property>
+              </object>
+              <packing>
+                <property name="position">9</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="MergeGrid">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="MergeScrolledWindow">
+                    <property name="width-request">752</property>
+                    <property name="height-request">216</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="MergeEntry">
+                    <property name="width-request">100</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">180</property>
+                    <property name="y">7</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="MergeBoton">
+                    <property name="label" translatable="yes">Mergear</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">7</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">380</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="MergeLabel">
+                    <property name="width-request">100</property>
+                    <property name="height-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Rama a mergear:</property>
+                  </object>
+                  <packing>
+                    <property name="x">65</property>
+                    <property name="y">-18</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="ConflictButton">
+                    <property name="label" translatable="yes">Ver conflictos</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">7</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">515</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="boton_guardar_cambios">
+                    <property name="label" translatable="yes">Guardar cambios</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">7</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">644</property>
+                    <property name="y">4</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">10</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="MergePage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Merge</property>
+              </object>
+              <packing>
+                <property name="position">10</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="LocalGrid">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="LocalScrolledWindow">
+                    <property name="width-request">752</property>
+                    <property name="height-request">216</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="shadow-type">in</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="ActualizarButton">
+                    <property name="label" translatable="yes">Actualizar</property>
+                    <property name="width-request">100</property>
+                    <property name="height-request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">577</property>
+                    <property name="y">3</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">11</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="LocalPage">
+                <property name="name">Local</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Local</property>
+              </object>
+              <packing>
+                <property name="position">11</property>
+                <property name="tab-fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child type="tab">
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child type="tab">
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child type="tab">
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child type="tab">
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child type="tab">
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child type="tab">
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child type="tab">
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="y">73</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="Titulo">
+            <property name="name">Titulo</property>
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Git-Rustico</property>
+            <attributes>
+              <attribute name="scale" value="3"/>
+              <attribute name="foreground" value="#9a9a99999696"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">290</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkListStore" id="RemoteList">
+    <columns>
+      <!-- column-name RemoteColumn1 -->
+      <column type="RemoteColumn"/>
+    </columns>
+    <data>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+    </data>
+  </object>
+  <object class="GtkListStore" id="RepositoryList">
+    <columns>
+      <!-- column-name Columna1 -->
+      <column type="Columna"/>
+    </columns>
+    <data>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+    </data>
+  </object>
+  <object class="GtkAction" id="action1"/>
+  <object class="GtkWindow" id="addWindow">
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkFixed" id="commitgrid">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkLabel" id="ArchivoAgregado">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Archivo agregado con exito</property>
+          </object>
+          <packing>
+            <property name="x">143</property>
+            <property name="y">13</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="errorAddWindow">
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkFixed" id="errorFixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkLabel" id="errorLabel">
+            <property name="width-request">118</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">No se pudo agregar el archivo</property>
+          </object>
+          <packing>
+            <property name="x">127</property>
+            <property name="y">40</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="errorRemoveWindow">
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkFixed" id="errorFixe">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkLabel" id="errorLabe">
+            <property name="width-request">118</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Error al querer eliminar el archivo</property>
+          </object>
+          <packing>
+            <property name="x">127</property>
+            <property name="y">40</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="removeWindow">
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkFixed" id="removeFixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkLabel" id="removeLabel">
+            <property name="width-request">161</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Archivo eliminado</property>
+          </object>
+          <packing>
+            <property name="x">127</property>
+            <property name="y">40</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkTreeStore" id="treestore"/>
+</interface>

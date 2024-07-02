@@ -1,0 +1,29 @@
+@startuml secuencia_de_uso 
+
+actor usuario1
+create "repository(local1)" as local1
+usuario1 -> local1 : init(directory)
+note over usuario1 : Hace cambios
+usuario1 -> local1 : add(archivos)
+usuario1 -> local1 : commit(mensaje)
+create "repository(server)" as server
+usuario1 -> server: new()
+usuario1 -> local1 : remote add(server)
+usuario1 -> local1 : push()
+local1 --> server : upload-pack 
+
+actor usuario2
+create "repository(local2)" as local2
+usuario2 -> local2 : git clone (server)
+
+note over usuario2: Hace cambios
+usuario2 -> local2 : add(archivos)
+usuario2 -> local2 : commit(mensaje)
+usuario2 -> local2 : push()
+local2 --> server : upload-pack 
+
+usuario1 -> local1 : pull()
+local1 -> server : pull()
+server --> local1 : recieve-pack
+
+@enduml

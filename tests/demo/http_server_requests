@@ -1,0 +1,50 @@
+Crear un Pull Requests:
+    POST localhost:9418/repos/{repo}/pulls
+
+    Body: 
+        {
+            "base" : "master",
+            "head": "rama"
+        }
+
+Listar Pull Requests: 
+    GET localhost:9418/repos/{repo}/pulls
+    
+    Query-Params:
+        state: 
+            open
+            closed
+        base: 
+            {base_name}
+
+
+Obtener un Pull Requests:
+    GET localhost:9418/repos/{repo}/pulls/{pull_number}
+
+
+
+Listar commits en un Pull Request;
+    GET repos/{repo}/pulls/{pull_number}/commits
+
+
+Realizar el merge de un Pull Request:
+    PUT /repos/{repo}/pulls/{pull_number}/merge
+
+    Body:
+        {
+            "user" : {
+                "name" : "theo",
+                "mail" : "mail"
+                },
+            "message" : "close PR 1"
+        }
+
+Modificar un Pull Requests:
+    PATCH /repos/{repo}/pulls/{pull_number}
+
+    Body:
+        {
+            "state" : "closed"
+        }
+
+        

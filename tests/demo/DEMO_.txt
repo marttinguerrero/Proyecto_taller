@@ -1,0 +1,83 @@
+#inicio creacion de repo y archivos
+git-rustico init
+#crear un archivo
+echo 'hola mundo' > archivo_1
+#cargo el usuario
+git-rustico config --user-name Gabriel --user-mail "gbeletti@fi.uba.ar"
+git-rustico commit primero
+#ls- files no va a retornar nada ya que el archivo no esta trakeado
+git-rustico ls-files
+git-rustico ls-files --others
+#agrego el archivo
+git-rustico add archivo_1
+#ls files lo muestra y en others no
+git-rustico ls-files
+git-rustico ls-files --others
+#commit
+git-rustico commit segundo
+#en others  se ve el commit
+git-rustico ls-files
+git-rustico ls-files --others
+#aseguro que haya un brach y creo otro
+git-rustico branch
+git-rustico branch rama
+git-rustico branch
+#creo mas archivos y hago al menos dos commits en cada rama y los muestro con log
+echo 'nuevo archivo' > archivo_master_1
+git-rustico add archivo_master_1
+git-rustico commit master_tercero
+echo 'otro archivo' > archivo_master_2
+git-rustico add archivo_master_2
+git-rustico commit master_cuarto
+git-rustico log
+git-rustico checkout rama
+git-rustico log
+echo 'nuevo archivo en la rama' > archivo_rama_1
+git-rustico add archivo_rama_1
+git-rustico commit rama_tercero
+echo 'otro archivo en la rama' > archivo_rama_2
+git-rustico add archivo_rama_2
+git-rustico commit rama_cuarto
+git-rustico log
+git-rustico rebase master rama
+git-rustico log
+#en este punto hay que mostrar la rama master
+git-rustico checkout master
+git-rustico log
+#mostrar el tag
+git-rustico tag
+git-rustico tag v1.0.0 -m 'primer tag'
+#nuevo archivo mas commits otros tags
+echo 'archivo nuevo tras un tag' > archivo_tag_1
+git-rustico add archivo_tag_1
+git-rustico commit post_tag_1
+git-rustico tag v1.0.1
+git-rustico tag
+git-rustico checkout rama
+git-rustico tag v1.1.1 -m 'tag de rama'
+#listado de tags
+git-rustico tag
+git-rustico tag -l 1.0
+#verificacion de tags
+git-rustico tag -v v1.0.1
+git-rustico tag -v v1.0.2
+#borrado
+git-rustico tag -d v1.0.1
+git-rustico tag
+#show ref
+git-rustico show-ref
+git-rustico show-ref --heads
+git-rustico show-ref --tags
+git-rustico show-ref --hash
+#ls tree
+git-rustico ls-tree master
+git-rustico ls-tree rama -l
+#comparo rama con tag de rama son iguales
+git-rustico ls-tree v1.1.1
+#format
+git-rustico ls-tree master '--format=archivo %(objectname) del tipo %(objecttype), en el modo %(objectmode) ubicado en %(path) en modo %(objectmode)'
+#tree de commits
+#hago un log copio un commit lo uso en s tree
+git-rustico log
+git-rustico ls-tree HASH
+

@@ -1,0 +1,27 @@
+[package]
+name = "git_rustico"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.31"
+flate2 = "1.0.28"
+sha1 = "0.10.6"
+gtk = "0.17.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+
+[[bin]]
+name = "client"
+path = "src/main.rs"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "gui"
+path = "src/gui/gui2.rs"

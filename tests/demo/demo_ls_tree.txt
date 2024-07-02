@@ -1,0 +1,20 @@
+init
+config --user-name g --user-mail g@gmail.com
+#se crea un archivo dd
+add dd
+commit algo
+#estos dos ls-tree dan lo mismo
+ls-tree HEAD
+ls-tree master
+#agregar la -l muestra el tamaño de los blob y un "-" en los tree o commits
+ls-tree master -l
+#nuevo branch
+branch rama2
+ls-tree rama2
+#creo algun archivo y hago commit
+#anoto el hash del commit
+#hago ls-tree del hash del commit
+#esto si hgo de un comit viejo donde solo se modifico un archivo le cambia el hash y el size al archivo
+# esta ultima linea mestra el option del formato
+ls-tree master '--format=archivo %(objectname) del tipo %(objecttype), en el modo %(objectmode) ubicado en %(path) con tamaño %(objectsize)'
+

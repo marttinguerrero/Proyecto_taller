@@ -1,0 +1,10 @@
+# agrega el origin del deamon
+remote add origin 127.0.0.1:9418
+# agrega otros
+remote add otro otro.git
+# renombra otros
+remote rename otro renombrado
+# obtiene renombrado retorna otro.git
+remote get-url renombrado
+# remueve renombrado
+remote remove renombrado
